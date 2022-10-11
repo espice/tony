@@ -1,0 +1,21 @@
+.input {
+  border-radius: 6px;
+  border: 1px solid #696969;
+  padding: 20px;
+  outline: none;
+  font-size: 18px;
+  color: var(--grey-800);
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.textarea {
+  resize: none;
+  border-radius: 6px;
+  border: 1px solid #696969;
+  padding: 20px;
+  outline: none;
+  font-size: 16px;
+  color: var(--grey-800);
+  font-weight: 600;
+}

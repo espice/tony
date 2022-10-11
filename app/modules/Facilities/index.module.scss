@@ -1,0 +1,17 @@
+.main__header__search {
+  margin: auto 0;
+  display: flex;
+  gap: 10px;
+  padding: 12px 12px;
+  border: 1px solid var(--grey-200);
+  border-radius: 6px;
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    min-width: 350px;
+    font-weight: 600;
+  }
+}
