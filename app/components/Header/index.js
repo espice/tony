@@ -1,14 +1,14 @@
-import PrimaryButton from '../Button/Primary';
-import TextButton from '../Button/Text';
-import styles from './index.module.scss';
-import { useState } from 'react';
-import Image from 'next/image';
+import PrimaryButton from "../Button/Primary";
+import TextButton from "../Button/Text";
+import styles from "./index.module.scss";
+import { useState } from "react";
+import Image from "next/image";
 
-import Logo from '../../public/logo.png';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import useSession from '../../utils/hooks/useSession';
-import getInitials from '../../utils/initials';
+import Logo from "../../public/logo.svg";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import useSession from "../../utils/hooks/useSession";
+import getInitials from "../../utils/initials";
 
 export default function Header() {
   const { user, error, loading } = useSession();
@@ -21,9 +21,9 @@ export default function Header() {
           src={Logo}
           width={52}
           height={52}
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: "pointer" }}
           onClick={() => {
-            router.push('/');
+            router.push("/");
           }}
         />
       </div>
@@ -44,11 +44,11 @@ const AccountOptions = () => {
         <TextButton
           click={() => {
             setLoginLoading(true);
-            if (router.pathname === '/login') {
+            if (router.pathname === "/login") {
               return setLoginLoading(false);
             }
 
-            router.push('/login');
+            router.push("/login");
           }}
           loading={registerLoading ? false : loginLoading}
         >
@@ -59,15 +59,15 @@ const AccountOptions = () => {
         <PrimaryButton
           click={() => {
             setRegisterLoading(true);
-            if (router.pathname === '/register') {
+            if (router.pathname === "/") {
               return setRegisterLoading(false);
             }
 
-            router.push('/register');
+            router.push("/");
           }}
           loading={loginLoading ? false : registerLoading}
         >
-          Get Started
+          Book a flight
         </PrimaryButton>
       </div>
     </div>
@@ -82,19 +82,19 @@ const AuthLinks = () => {
 
   const links = [
     {
-      label: 'Dashboard',
-      href: '/',
-      active: router.pathname === '/',
+      label: "Dashboard",
+      href: "/",
+      active: router.pathname === "/",
     },
     {
-      label: 'Facilities',
-      href: '/facilities',
-      active: router.pathname === '/facilities',
+      label: "Facilities",
+      href: "/facilities",
+      active: router.pathname === "/facilities",
     },
     {
-      label: 'Insurance',
-      href: '/insurance',
-      active: router.pathname === '/insurance',
+      label: "Insurance",
+      href: "/insurance",
+      active: router.pathname === "/insurance",
     },
   ];
 
@@ -105,7 +105,7 @@ const AuthLinks = () => {
           <Link href={link.href} key={index}>
             <div
               className={`${styles.header__nav__link} ${
-                link.active ? styles.header__nav__link__active : ''
+                link.active ? styles.header__nav__link__active : ""
               }`}
             >
               {link.label}
