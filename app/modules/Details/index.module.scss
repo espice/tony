@@ -1,0 +1,36 @@
+.heading {
+    color: #2E3742;
+    margin-right: auto;
+    font-weight: 900;
+    margin: 0px auto 0px 0px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.span {
+    color: #2E3742;
+    margin-right: auto;
+    font-weight: 600;
+    margin: 0px auto 0px 0px;
+}
+
+.subheading {
+    margin-right: auto;
+    letter-spacing: 5px;
+    color: #575757;
+    display: flex;
+    font-weight: 600;
+    margin-top: 25px;
+    gap: 12px;
+    align-items: center;
+    &__line {
+        height: 1px;
+        width: 120px;
+        background-color: #575757;
+    }
+}
+
+.flight {
+    
+}

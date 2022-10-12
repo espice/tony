@@ -3,8 +3,6 @@ import PrimaryButton from "../../components/Button/Primary";
 import styles from "./index.module.scss";
 import Textfield from "../../components/Textfield";
 import { useState } from "react";
-import axios from "../../utils/axios";
-import useSession from "../../utils/hooks/useSession";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 

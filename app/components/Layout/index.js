@@ -1,21 +1,22 @@
 import Head from "next/head";
 import Header from "../Header";
-import { Children } from "react";
+import { Children, useState } from "react";
 import styles from "./index.module.scss";
-import useSession from "../../utils/hooks/useSession";
 import { useRouter } from "next/router";
 import Loader from "../Loader";
 
 export default function Layout({ children, page }) {
-  const { user, error, loading } = useSession();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   console.log(loading, "hi");
+  console.log(page)
   console.log(error, !error);
   const router = useRouter();
 
   return (
     <>
       <Head>
-        <title>{page.title + ` • Tony Airways `}</title>
+        <title>{page?.title + ` • Tony Airways `}</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
@@ -47,7 +48,7 @@ export default function Layout({ children, page }) {
             <Loader center={true} />
           ) : (
             <>
-              {!page.hideHeader && <Header />}
+              {!page?.hideHeader && <Header />}
               <div className={styles.content}>{children}</div>
             </>
           )}
