@@ -23,6 +23,7 @@
     font-weight: 600;
     margin-top: 25px;
     gap: 12px;
+    font-size: 20px;
     align-items: center;
     &__line {
         height: 1px;
@@ -31,6 +32,114 @@
     }
 }
 
+.flights {
+    margin-top: 20px;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #D4D4D4;
+}
+
 .flight {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    width: 100%;
     
+    &__image {
+        margin-left: 20px;
+    }
+    &__texts {
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+        margin-left: 20PX;
+        &__dates {
+            font-weight: 600;
+            color:#2F2F2F;
+            font-size: 22px;
+            margin: 0;
+        }
+        &__flights {
+            margin: 0;
+            color: #6A6A6A;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+    }
+
+    &__textss {
+        display: flex;
+        margin-left: auto;
+        gap: 20px;
+        width: 500px;
+        align-items: center;
+    }
+    &__time {
+        margin-right: auto;
+        color: #6A6A6A;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &__change {
+        margin-left: auto;
+        margin-right: 20px;
+        color: #6A6A6A;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.flightdetails {
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    border: 2px solid #D4D4D4;
+    width: 100%;
+
+    &__headings {
+        display: flex;
+        &__heading {
+            letter-spacing: 2px;
+            color: #575757;
+            margin-left: 30px;
+            font-size: 16px;
+        }
+        &__right {
+            margin-left: auto;
+            display: flex;
+            margin-right: 45px;
+            font-size: 16px;
+            color: #575757;
+            gap: 45px;
+            letter-spacing: 2px;
+        }
+    }
+    &__text {
+        display: flex;
+        margin-right: 115px;
+        &__heading {
+            letter-spacing: 0.2px;
+            color: #2E3742;
+            margin-left: 30px;
+            font-size: 17px;
+
+        }
+        &__right {
+            gap: 40px;
+            margin-left: auto;
+            display: flex;
+            margin-right: 45px;
+            font-size: 17px;
+            color: #2E3742;
+            letter-spacing: 0.2px;      
+            text-align: left;
+        }
+    }
+
+}
+
+.hack {
 }
